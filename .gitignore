@@ -1,0 +1,10 @@
+env/
+venv/
+.env
+.env/
+.vscode/
+.env/
+envlance/
+.envlance
+/*__pycache__*/
+db.sqlite3

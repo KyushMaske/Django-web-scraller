@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ad Platforms Data</title>
+</head>
+<body>
+    <form method="get">
+        <input type="text" name="q" placeholder="Search by domain..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Seller ID</th>
+                <th>Name</th>
+                <th>Domain</th>
+                <th>Seller Type</th>
+                <th><a href="?sort=date_first_added">Date First Added</a></th>
+                <th>Ad Platform</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                <tr>
+                    <td>{{ item.seller_id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.domain }}</td>
+                    <td>{{ item.seller_type }}</td>
+                    <td>{{ item.date_first_added }}</td>
+                    <td>{{ item.ad_platform }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
